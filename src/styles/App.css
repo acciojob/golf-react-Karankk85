@@ -1,16 +1,23 @@
-.playground{
-    width:50%;
-    height:50%;
+.playground {
+    width: 50%;
+    height: 50%;
     margin: auto;
+    position: relative; /* Important for absolute positioning of the ball */
+    border: 1px solid #ccc;
 }
-body html .root {
+
+body, html, .root {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
-.ball{
+
+.ball {
     background-color: black;
     box-shadow: 0 10px 10px -6px;
-    position: relative;
-    right: 0px;
+    position: absolute; /* Changed from relative to absolute */
+    left: 0px; /* Will be controlled by inline style from React */
+    top: 50px;
     height: 50px;
     width: 50px;
     border-radius: 25px;
